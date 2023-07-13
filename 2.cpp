@@ -31,18 +31,18 @@ public:
 
 int main()
 {
-    Hero h1;
-    Hero *b=new Hero;
+   //  Hero h1;//Static Allocation
+    Hero *b=new Hero; //Dynamic Allocation
     //cout<<"By Default health is :"<<h1.gethealth()<<endl;
     //cout<<"By Default str is :"<<h1.getstr()<<endl;
     // h1.health = 20; //When public
-    h1.sethealth(50); //When private
-    h1.level = 'A';
+    b->sethealth(50); //When private 
+    b->level = 'A';
     // h1.str = "20";//When public
-    h1.setstr("30");//When private
+    b->setstr("30");//When private
     //cout << "size of hero class is :" << sizeof(h1)<<endl;
-    cout << "Health is :" << h1.gethealth()<<endl; // Garbage Value when not set to any value
-    cout << "Level is :" << h1.level<<endl;   
-    cout << "String is :" << h1.getstr()<<endl;     
+    cout << "Health is :" << b->gethealth()<<endl; // Garbage Value when not set to any value
+    cout << "Level is :" << b->level<<endl;   
+    cout << "String is :" << b->getstr()<<endl;     
     return 0;
 }
